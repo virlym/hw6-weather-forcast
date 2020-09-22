@@ -1,0 +1,45 @@
+.navbar {
+    position: relative;
+    height: 100px;
+}
+.title {
+    position: absolute;
+    left: 50%;
+    /*margin-left: -100px;  /* 50% of your logo width */
+    display: block;
+    color: whitesmoke;
+}
+
+.card-deck{
+    padding: 0;
+    margin: auto, 0;
+}
+
+img{
+    height: 35px;
+}
+
+.main-content{
+    position: relative;
+}
+
+h2{
+    margin: auto, 20px;
+    padding: 10px;
+}
+
+#day0{
+    border-style: solid;
+    border-width: 2px;
+    border-color: lightslategray;
+}
+
+#searchHistory{
+    margin-top: 10px;
+}
+.searchedCities{
+    border-style: solid;
+    border-width: 2px;
+    border-color: lightslategray;
+    padding: 2px;
+}

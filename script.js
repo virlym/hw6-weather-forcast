@@ -34,3 +34,19 @@
 
     UV index color-coded for favorable, moderate, or severe
 */
+
+function init(){
+
+    $("#day0").children("h2").first().text("Covington");
+    $("#day0").children("h2").last().text("(9/21)");
+    $("#day0").children("img").attr("src", `http://openweathermap.org/img/wn/02n@2x.png`);
+
+    $("#day1").children("p").first().text("testing");
+    $("#day1").children("p").last().text("text2");
+    for(var i = 1; i < 6; i++){
+        $(`#day${i}`).children("img").attr("src", `http://openweathermap.org/img/wn/02n@2x.png`);
+        $(`#day${i}`).children("h5").text(`9/2${i}`);
+    }
+}
+
+init();

@@ -15,32 +15,127 @@
 
     <!-- Header -->
     <!-- Weather Dashboard -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <h1 class="title"> Weather Dashboard </h1>
+    </nav>
 
 
+    <main class = "container-fluid no-gutters content-wrap">
+        <section class =" row">
     <!-- Left panel -->
-    <!-- search text-->
-    <!-- search text field-->
-    <!-- search submit button-->
-    <!-- search history (clickable text to research)-->
+            <aside class = "col-md-3">
+                <!-- search text-->
+                <!-- search text field-->
+                <!-- search submit button-->
+                <section class = "row">
+                    <form class = "col-md-12">
+                        <label for = "citySearch"> Search for a city : </label><br>
+                        <input type = "text" id = "cityToSearch" placeholder = "Enter a city name">
+                        <input type = "submit" value = "Submit">
+                    </form>
+                </section>
+                <!-- search history (clickable text to research)-->
+                <section class = "row">
+                    <article class = "col-md-12" id = "searchHistory">
+                        <div class = "searchedCities"> 1 </div>
+                        <div class = "searchedCities"> 2 </div>
+                    </article>
+                </section>
+            </aside>
 
 
     <!-- Right panel -->
+            <article class = "col-md-9">
     <!-- Row 1 -->
+                <section class = "row">
+                    <article class = "col-md-12" id = "day0">
     <!-- City name + date + weather icon-->
     <!-- temp -->
     <!-- Humidity -->
     <!-- Wind Speed -->
     <!-- UV Index -->
+                        
+                        <h2 style = "float: left;"> Place </h2>
+                        <h2 style = "float: left;"> Day </h2>
+                        <img src = "" alt = "" style = "float: left;">
+
+                        <p style = "clear: left;" id = "currentTemp"> Temperature : </p>
+                        <p id = "currentHumid"> Humidity : </p>
+                        <p id = "currentWind"> Wind Speed : </p>
+                        <p id = "currentUv"> UV Index : </p>
+                    
+                    </article>
+                </section>
 
     <!-- Row 2 -->
+                <section class = "row">
+                    <article class = "col-md-12">
     <!-- 5-day forecast title-->
+                        <h3> 5-day Forecast </h3>
+                    </article>
+                </section>
 
     <!-- Row 3 -->
+                <section class = "row">
     <!-- 5 CARDS -->
     <!-- date -->
     <!-- weather icon -->
     <!-- temp -->
     <!-- humidity -->
+                    <section class = "card-deck col-lg-12">
+                        <article class = "card">
+                            <figure class = "card-body" id = "day1">
+                                <h5> Day One </h5>
+                                <img src = "" alt = "">
+                                <p> Temp </p>
+                                <p> Humidity </p>
+                            </figure>
+                        </article>
+                        
+                        
+                        <article class = "card">
+                            <figure class = "card-body" id = "day2">
+                                <h5> Day One </h5>
+                                <img src = "" alt = "">
+                                <p> Temp : 76 F</p>
+                                <p> Humidity : 46 </p>
+                            </figure>
+                        </article>
+                        
+                        
+                        <article class = "card">
+                            <figure class = "card-body" id = "day3">
+                                <h5> Day One </h5>
+                                <img src = "" alt = "">
+                                <p> Temp </p>
+                                <p> Humidity </p>
+                            </figure>
+                        </article>
+                        
+                        
+                        <article class = "card">
+                            <figure class = "card-body" id = "day4">
+                                <h5> Day One </h5>
+                                <img src = "" alt = "">
+                                <p> Temp </p>
+                                <p> Humidity </p>
+                            </figure>
+                        </article>
+                        
+                        
+                        <article class = "card">
+                            <figure class = "card-body" id = "day5">
+                                <h5> Day One </h5>
+                                <img src = "" alt = "">
+                                <p> Temp </p>
+                                <p> Humidity </p>
+                            </figure>
+                        </article>
+                </section>
+                </section>
+            </article>
+        </section>
+    </main>
 
     
     <!-- Bootstrap -->
