@@ -56,7 +56,7 @@ function storeHistory(){
 function populateWeather(){
     // ajax request for the current weather, swapping out any spaces in the city name with "+"
     $.ajax({
-        url: `http://api.openweathermap.org/data/2.5/weather?q=${city.replace(/\s+/g,"+")}&units=imperial&appid=${apiKey}`,
+        url: `https://api.openweathermap.org/data/2.5/weather?q=${city.replace(/\s+/g,"+")}&units=imperial&appid=${apiKey}`,
         method: "GET"
     }).then(function(response){
         // if the request was successful, set the current weather to the returned information
@@ -75,7 +75,7 @@ function populateWeather(){
 
         // make another ajax call to get the UV Index using the latitude and longitude from the first call
         $.ajax({
-            url: `http://api.openweathermap.org/data/2.5/uvi/forecast?lat=${lat}&lon=${long}&appid=${apiKey}`,
+            url: `https://api.openweathermap.org/data/2.5/uvi/forecast?lat=${lat}&lon=${long}&appid=${apiKey}`,
             method: "GET"
         }).then(function(response){
             // populate the current weather section with the returned data
@@ -83,7 +83,7 @@ function populateWeather(){
             $("#day0").children("h2").first().text(currentWeather.name);
             // set the current date in the 'mm/dd/yyy' format, removing any leading 0s
             $("#day0").children("h2").last().text(moment().format('l'));
-            $("#day0").children("img").attr("src", `http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png`);
+            $("#day0").children("img").attr("src", `https://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png`);
             $("#day0").children("img").attr("alt", `weather icon`);
             $("#currentTemp").text(`Temperature : ${currentWeather.main.temp} F`);
             $("#currentHumid").text(`Humidity : ${currentWeather.main.humidity}`);
@@ -95,7 +95,7 @@ function populateWeather(){
 
     // make a separate ajax call for the 5-day forecast
     $.ajax({
-        url: `http://api.openweathermap.org/data/2.5/forecast?q=${city.replace(/\s+/g,"+")}&units=imperial&appid=${apiKey}`,
+        url: `https://api.openweathermap.org/data/2.5/forecast?q=${city.replace(/\s+/g,"+")}&units=imperial&appid=${apiKey}`,
         method: "GET"
     }).then(function(response){
         var forecast = response.list;
@@ -104,7 +104,7 @@ function populateWeather(){
         for(var i = 1; i < 6; i++){
             // populate the cards
             $(`#day${i}`).children("h5").text(moment().add(i, 'day').format('l'));
-            $(`#day${i}`).children("img").attr("src", `http://openweathermap.org/img/wn/${forecast[timeCount].weather[0].icon}@2x.png`);
+            $(`#day${i}`).children("img").attr("src", `https://openweathermap.org/img/wn/${forecast[timeCount].weather[0].icon}@2x.png`);
             $(`#day${i}`).children("img").attr("alt", `weather icon`);
             $(`#day${i}`).children("p").first().text(`Temp : ${forecast[timeCount].main.temp} F`);
             $(`#day${i}`).children("p").last().text(`Humidity : ${forecast[timeCount].main.humidity}`);
