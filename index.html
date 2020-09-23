@@ -31,14 +31,12 @@
                     <form class = "col-md-12">
                         <label for = "citySearch"> Search for a city : </label><br>
                         <input type = "text" id = "cityToSearch" placeholder = "Enter a city name">
-                        <input type = "submit" value = "Submit">
+                        <input type = "submit" value = "Submit" id = "searchCity">
                     </form>
                 </section>
                 <!-- search history (clickable text to research)-->
                 <section class = "row">
                     <article class = "col-md-12" id = "searchHistory">
-                        <div class = "searchedCities"> 1 </div>
-                        <div class = "searchedCities"> 2 </div>
                     </article>
                 </section>
             </aside>
@@ -62,7 +60,7 @@
                         <p style = "clear: left;" id = "currentTemp"> Temperature : </p>
                         <p id = "currentHumid"> Humidity : </p>
                         <p id = "currentWind"> Wind Speed : </p>
-                        <p id = "currentUv"> UV Index : </p>
+                        <p> UV Index : <span  id = "currentUv"> </span></p>
                     
                     </article>
                 </section>
@@ -144,6 +142,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Moment -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <!-- personal -->
     <script src="script.js"></script>
 </body>

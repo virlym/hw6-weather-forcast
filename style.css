@@ -43,3 +43,20 @@ h2{
     border-color: lightslategray;
     padding: 2px;
 }
+
+.uv-favorable{
+    background-color: green;
+}
+
+.uv-moderate{
+    background-color: yellow;
+}
+.uv-high{
+    background-color: orange;
+}
+.uv-very-high{
+    background-color: red;
+}
+.uv-severe{
+    background-color: purple;
+}  
