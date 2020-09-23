@@ -1,3 +1,12 @@
+body{
+    background-color: slategray;
+}
+
+aside{
+    background-color: lightgray;
+    padding: 10px;
+}
+
 .navbar {
     position: relative;
     height: 100px;
@@ -5,7 +14,6 @@
 .title {
     position: absolute;
     left: 50%;
-    /*margin-left: -100px;  /* 50% of your logo width */
     display: block;
     color: whitesmoke;
 }
@@ -15,6 +23,9 @@
     margin: auto, 0;
 }
 
+.card{
+    background-color: skyblue;
+}
 img{
     height: 35px;
 }
@@ -32,6 +43,7 @@ h2{
     border-style: solid;
     border-width: 2px;
     border-color: lightslategray;
+    background-color: skyblue;
 }
 
 #searchHistory{
@@ -60,3 +72,17 @@ h2{
 .uv-severe{
     background-color: purple;
 }  
+
+footer{
+    border-top-style: solid;
+    border-top-color: lightseagreen;
+    border-top-width: 5px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: skyblue;
+    font-size: 20px;
+    font-family: 'Bilbo', 'Times New Roman', Times, serif;
+    text-align: center;
+}
